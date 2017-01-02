@@ -13,13 +13,13 @@ public struct SearchNode<T: Equatable>: Equatable, Hashable
     public let value: T
     public let log:   String;
 
-    init(_ value: T)
+    public init(_ value: T)
     {
         self.value = value;
         self.log   = String()
     }
 
-    init(_ value: T, log: String)
+    public init(_ value: T, log: String)
     {
         self.value = value
         self.log   = log
