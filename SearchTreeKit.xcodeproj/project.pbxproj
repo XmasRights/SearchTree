@@ -15,6 +15,8 @@
 		4B60650D1E1A109000172FA6 /* SearchTreeKit iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B6064FF1E1A109000172FA6 /* SearchTreeKit iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B6065151E1A113700172FA6 /* SearchTreeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6065141E1A113700172FA6 /* SearchTreeKit.swift */; };
 		4B6065161E1A113700172FA6 /* SearchTreeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6065141E1A113700172FA6 /* SearchTreeKit.swift */; };
+		4BABFB221E1A154E0084BBF5 /* SearchNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BABFB211E1A154E0084BBF5 /* SearchNode.swift */; };
+		4BABFB231E1A154E0084BBF5 /* SearchNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BABFB211E1A154E0084BBF5 /* SearchNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,7 @@
 		4B60650A1E1A109000172FA6 /* SearchTreeKit_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTreeKit_iOSTests.swift; sourceTree = "<group>"; };
 		4B60650C1E1A109000172FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B6065141E1A113700172FA6 /* SearchTreeKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTreeKit.swift; sourceTree = "<group>"; };
+		4BABFB211E1A154E0084BBF5 /* SearchNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 				4B6064E11E1A106C00172FA6 /* SearchTreeKit.h */,
 				4B6064E21E1A106C00172FA6 /* Info.plist */,
 				4B6065141E1A113700172FA6 /* SearchTreeKit.swift */,
+				4BABFB211E1A154E0084BBF5 /* SearchNode.swift */,
 			);
 			path = SearchTreeKit;
 			sourceTree = "<group>";
@@ -328,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B6065151E1A113700172FA6 /* SearchTreeKit.swift in Sources */,
+				4BABFB221E1A154E0084BBF5 /* SearchNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B6065161E1A113700172FA6 /* SearchTreeKit.swift in Sources */,
+				4BABFB231E1A154E0084BBF5 /* SearchNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +648,7 @@
 				4B6064F41E1A106C00172FA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B6064F51E1A106C00172FA6 /* Build configuration list for PBXNativeTarget "SearchTreeKitTests" */ = {
 			isa = XCConfigurationList;
@@ -650,6 +657,7 @@
 				4B6064F71E1A106C00172FA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B60650E1E1A109000172FA6 /* Build configuration list for PBXNativeTarget "SearchTreeKit iOS" */ = {
 			isa = XCConfigurationList;
@@ -658,6 +666,7 @@
 				4B6065101E1A109000172FA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B6065111E1A109000172FA6 /* Build configuration list for PBXNativeTarget "SearchTreeKit iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -666,6 +675,7 @@
 				4B6065131E1A109000172FA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
