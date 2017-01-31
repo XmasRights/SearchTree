@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct SearchNode<T: Equatable>: Equatable, Hashable
+public struct SearchNode<T: Equatable>
 {
     public let value: T
     public let log:   String;
@@ -24,16 +24,20 @@ public struct SearchNode<T: Equatable>: Equatable, Hashable
         self.value = value
         self.log   = log
     }
+}
 
-    // MARK: Equatable
+extension SearchNode: Equatable
+{
     public static func ==<T>(lhs: SearchNode<T>, rhs: SearchNode<T>) -> Bool
     {
         return lhs.value == rhs.value
     }
+}
 
-    // MARK: Hashable
+extension SearchNode: Hashable
+{
     public var hashValue: Int
-    {
+        {
         get {
             return "\(value):\(log)".hashValue
         }
