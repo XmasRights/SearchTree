@@ -10,7 +10,9 @@ import Foundation
 
 public class SearchTreeKit
 {
-    public static func breadthFirstSearch<T: Equatable> (start: SearchNode<T>, actions: [(SearchNode<T>)->SearchNode<T>?], end isEnd: (SearchNode<T>) -> Bool) -> SearchNode<T>?
+    public enum Result { case Pass, Fail, Continue }
+
+    public static func breadthFirstSearch<T: Equatable> (start: SearchNode<T>, actions: [(SearchNode<T>)->SearchNode<T>?], end isEnd: (SearchNode<T>) -> Result) -> SearchNode<T>?
     {
         var visted: Set  <SearchNode<T>> = [start]
         var queue:  Array<SearchNode<T>> = [start]
@@ -19,12 +21,15 @@ public class SearchTreeKit
         {
             let node = queue.remove(at: 0)
 
-            if isEnd(node)
+            switch isEnd(node)
             {
+            case .Pass:
                 return node
-            }
-            else
-            {
+
+            case .Fail:
+                continue
+
+            case .Continue:
                 let nextNodes = apply(actions: actions, toNode: node)
 
                 for next in nextNodes
@@ -35,23 +40,27 @@ public class SearchTreeKit
                         queue.append(next)
                     }
                 }
+
             }
         } while (queue.count > 0)
         return nil
     }
 
-    public static func depthFirstSearch<T: Equatable> (start: SearchNode<T>, actions: [(SearchNode<T>)->SearchNode<T>?], end isEnd: (SearchNode<T>) -> Bool) -> SearchNode<T>?
+    public static func depthFirstSearch<T: Equatable> (start: SearchNode<T>, actions: [(SearchNode<T>)->SearchNode<T>?], end isEnd: (SearchNode<T>) -> Result) -> SearchNode<T>?
     {
         let nextNodes = apply(actions: actions, toNode: start)
 
         for next in nextNodes
         {
-            if isEnd (next)
+            switch isEnd (next)
             {
+            case .Pass:
                 return next
-            }
-            else
-            {
+
+            case .Fail:
+                return nil
+
+            case .Continue:
                 if let result = depthFirstSearch(start: next, actions: actions, end: isEnd) { return result }
             }
         }
