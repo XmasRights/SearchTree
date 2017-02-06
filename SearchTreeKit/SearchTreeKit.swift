@@ -14,8 +14,8 @@ public class SearchTreeKit
 
     public static func breadthFirstSearch<T: Equatable> (start: SearchNode<T>, actions: [(SearchNode<T>)->SearchNode<T>?], end isEnd: (SearchNode<T>) -> Result) -> SearchNode<T>?
     {
-        var visted: Set  <SearchNode<T>> = [start]
-        var queue:  Array<SearchNode<T>> = [start]
+        var visited: Set  <SearchNode<T>> = [start]
+        var queue:   Array<SearchNode<T>> = [start]
 
         repeat
         {
@@ -34,10 +34,10 @@ public class SearchTreeKit
 
                 for next in nextNodes
                 {
-                    if (!visted.contains(next))
+                    if (!visited.contains(next))
                     {
-                        visted.insert(next)
-                        queue.append(next)
+                        visited.insert(next)
+                        queue  .append(next)
                     }
                 }
 
